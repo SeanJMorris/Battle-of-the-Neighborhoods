@@ -1,1 +1,32 @@
-"this is my new file"
+Coursera Capstone “Battle of the Neighborhoods” Project
+By Sean Morris
+
+Introduction & Business Problem
+
+Ray Kroc, the Founder of McDonald’s, once famously quipped that he was in the business of “real estate” (Forbes). Although it sounds like a joke, Kroc was a shrewd businessman who meant what he had said. McDonald’s became an iconic bran because of the way that its businesses were set up. Kroc owned the land and set up the establishments as franchises that would be managed by others. This arrangement allowed Kroc to leverage the benefits of being a pseudo-landlord to his franchisees without the headache of managing local operations beyond basic performance standards. Ultimately, this model lead to the development of one of the most iconic food industry brands in America. 
+
+To follow Kroc’s lead, one might leverage location and geographic data to try to identify new real estate opportunities that could serve as growth areas for new markets. This is a ripe area for data science to explore. 
+
+The Foursquare database contains extensive data that maps food industry locations. It is an ideal resource for determining the density and concentration of specific types of food industry locations. 
+
+With a powerful scripting and data science language like Python, large location databases like Foursquare’s can be leveraged to help identify possible new opportunities in key growth areas. However, data scientists would do well to use data like this to identify whether specific locations may already be experiencing some saturation of existing competitors already. If one neighborhood already has three hamburger joints, it might be more difficult to attract customers to another.  
+
+This final project will use geographic data for the city of Boston to identify food establishments of a particular type (in this case what Foursquare refers to as “Pizza Places”) to determine whether certain neighborhoods may already be showing some saturation already. In addition, we will use this same information to understand if the existing neighborhood locations serve as sufficient categories for which to group these pizza places. Are all pizza places in the Financial District the same, or is there more variation between neighborhoods than within neighborhoods geographically?
+
+These questions are difficult to answer completely because of the limited nature of the data that we will be pulling from Foursquare for this assignment. However, many of these questions can be explored in detail even with the data that we already have access to. This is an exciting and useful area to be doing research in data science and it could be extremely useful to corporate headquarters of any number of brick-and-morter service industries including food service, retail, fitness centers, and grocery stores. 
+
+Data
+
+The city of Boston has more than 20 distinct neighborhoods – each with a unique character. You can read more about each neighborhood [here](https://www.boston.gov/neighborhoods). For example, the North End was originally a neighborhood of Italian immigrants but more recently has become an upscale location for tourists with plenty of Italian-style dining options. The neighborhood of Brighton is known for being a slightly more affordable area and typically caters to young professionals. 
+
+The city of Boston posts its location data publicly on its website to help real estate developers, researchers, and city planners have access to this information. In this lab, we will download one of the city’s more popular neighborhood datasets simply called “Boston Neighborhoods”, available [here]( https://data.boston.gov/dataset/boston-neighborhoods/resource/13ee2b65-6547-4168-b112-83995f138602). 
+
+In this project will also be downloading and accessing data from Foursquare. Foursquare is a company that provides location data and intelligence to its customers - primarily web developers - for use in their applications. In this project, we will be making a limited number of calls to Foursquare’s API to pull data about pizza places in areas of the city of particular interest.  We will be using the Foursquare [explore endpoint]( https://developer.foursquare.com/docs/places-api/endpoints/) to get venue recommendations in the “Pizza Place” Category. 
+
+To begin, we will be pulling those pizza place categories that correspond to the top 50 locations of the geographic center of each of the neighborhoods in question. These geographic centers we will identify through Google.  
+
+To make this assignment more practical, we will be excluding several neighborhoods in our analysis. This will include most of the larger, outlying neighborhoods outside of the city center (including Brighton, Allston, Dorchester, Roxbury, Mattapan, the Harbor Islands, Roslindale, West Roxbury, and others).  
+
+Dictionaries & Libraries
+
+To complete this project, we will also be downloading a number of python scripting libraries. This includes the pandas library to work with data, the Numpy library to work with vectorized data, the json library to work with the json data that we will be downloading from the City of Boston, the Geopy library to find location data for Boston, the MatplotLib library to plot our data, Folium to render our data in a map, and SkLearn to run a Kmeans clustering algorithm to group the restaurant data into clusters. 
